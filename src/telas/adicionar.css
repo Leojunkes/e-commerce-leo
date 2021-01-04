@@ -1,0 +1,12 @@
+#containerGeral10{
+    width: 60%;
+    height: 100vh;
+    padding-top: 50px;
+}
+#nomeLabel{
+    padding-right: 100%;
+    padding-top: 5px;
+}
+#buttonAdicionar{
+    margin: 5px 80% 0 0;
+}

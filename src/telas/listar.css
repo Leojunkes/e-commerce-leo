@@ -1,0 +1,25 @@
+#cardCont{
+    width: 18rem;
+    height: 20rem;
+   
+}
+#imgCard{
+    height: 11rem;
+    width: 18rem;
+}
+.containerCard{
+    margin: 10px 200px 0 100px;
+    
+    
+}
+.row{
+    width: 100%;
+    height: 100vh;
+}
+#txtcarros{
+    padding-right: 170px;
+}
+i{
+    padding-right: 170px;
+    font-size: 20px;
+}
