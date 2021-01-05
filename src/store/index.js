@@ -1,9 +1,9 @@
 import {createStore, combineReducers} from 'redux';
 
-import carsreducer from './cars/index';
+import reducer from '../cars/index';
 
 const rootreducers = combineReducers({
-    cars:carsreducer
-})
+    cars:reducer
+});
 
-export default createStore(rootreducers)
+export default createStore(rootreducers);

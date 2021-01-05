@@ -10,7 +10,7 @@ export default function Listar(){
 
     const c = cars.map((car, index)=>
         
-        <div key={index} className="col-sm">
+        <div key={index} className="col-sm" car={car}>
         <div id="cardCont" className="card" >
             <img id="imgCard" className="carsMapShowzem" src={car.url} />
         <div className="card-body">
