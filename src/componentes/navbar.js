@@ -4,8 +4,8 @@ import './navbar.css';
 
 function Navbar() {
     return (
-      <div id="geralContainer" className="container-fluid">
-        <nav  className="navbar navbar-expand-lg navbar-light ">
+      
+        <nav id="navTotal" className="navbar navbar-expand-lg navbar-light ">
   <div className="container-fluid">
     <a className="navbar-brand" href="#">
         
@@ -35,7 +35,7 @@ function Navbar() {
     </div>
   </div>
 </nav>
-      </div>
+     
     );
   }
   
