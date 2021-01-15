@@ -1,9 +1,11 @@
-import {createStore, combineReducers} from 'redux';
+import {configureStore} from '@reduxjs/toolkit';
 
-import reducer from '../cars/index';
 
-const rootreducers = combineReducers({
-    cars:reducer
-});
+import carsReducer from './ducks/cars';
 
-export default createStore(rootreducers);
+export default configureStore({
+    reducer:{
+        cars:carsReducer
+    }
+})
+

@@ -1,8 +1,11 @@
 import React from 'react';
 import './adicionar.css';
 import { useState } from 'react';
-import {addCar} from '../cars/index.js';
-import {useDispatch} from 'react-redux';
+
+import { useDispatch} from 'react-redux';
+
+import {addCarFetch} from '../store/fetchActions';
+
 
 export default function Adicionar(){
 
@@ -14,7 +17,7 @@ function formChange(e){
 }
 function onSubmit(e){
     e.preventDefault();
-    dispatch(addCar(form)) ;
+    dispatch(addCarFetch(form)) ;
     setForm({name:'', url:''});
     
 }
@@ -32,7 +35,7 @@ function onSubmit(e){
             <label id="nomeLabel"  className="form-label">URL:</label>
             <input value={form.url} onChange={formChange} className="form-control" type="text" name="url" id="InputUrl" placeholder="URL:https://cars"/>
             </div>
-            <button id="buttonAdicionar" type="submit" className="btn btn-primary">Adicionar</button>
+            <button type="submit" id="buttonAdicionar" className="btn btn-primary">Adicionar</button>
         </form>
             
         
