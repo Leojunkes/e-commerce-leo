@@ -7,15 +7,8 @@
     height: 11rem;
     width: 18rem;
 }
-.containerCard{
-    
-    
-    
-}
-.row{
-    width: 100%;
-    height: 100vh;
-}
+
+
 #txtcarros{
     padding-right: 170px;
 }
@@ -25,8 +18,8 @@ i{
 }
 #geralContainerCars{
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 10px;
-    grid-row-gap: 1em;
-    margin-top: 6px;
+    
+    
 }

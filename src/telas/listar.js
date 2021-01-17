@@ -4,6 +4,8 @@ import './listar.css';
 
 import {getAllCars} from '../store/fetchActions'
 
+import Car from '../componentes/car';
+
 export default function Listar(){
 
     const cars = useSelector((state)=>state.cars);
@@ -13,19 +15,14 @@ export default function Listar(){
         dispatch(getAllCars())
     }, [])
 
-    return(
-   <div id="geralContainerCars" className="container-fluid-sm-6">
-       {cars.map(car=>(
-        <div id="cardCont" className="card">
-            <img id="imgCard" className="carsContainer" src={car.url}/>
-        <div key={car.id} className="card-body">
-            <strong>{car.name}</strong>
-            <p className="card-text"><i class="fas fa-cart-plus"></i></p>
+    function AddItemCart(car) {
+        console.log(car)
+    }
 
+    return(
+        <div  className="container-fluid">
+            <div className="row">{cars.map((car, index)=><Car key="index" car={car}/>)}</div>
         </div>
-        </div>
-       ))}
-   </div>
    )
 }
 
