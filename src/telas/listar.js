@@ -5,6 +5,7 @@ import './listar.css';
 import {getAllCars} from '../store/fetchActions'
 
 import Car from '../componentes/car';
+import { addItem } from '../store/ducks/cart/index';
 
 export default function Listar(){
 
@@ -15,13 +16,14 @@ export default function Listar(){
         dispatch(getAllCars())
     }, [])
 
-    function AddItemCart(car) {
-        console.log(car)
+    function addItemCart(car) {
+        dispatch(addItem(car)); 
+        
     }
 
     return(
         <div  className="container-fluid">
-            <div className="row">{cars.map((car, index)=><Car key="index" car={car}/>)}</div>
+            <div className="row">{cars.map((car, index)=><Car key="index" car={car} addItemCart={addItemCart}/>)}</div>
         </div>
    )
 }

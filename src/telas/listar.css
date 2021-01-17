@@ -17,9 +17,7 @@ i{
     font-size: 20px;
 }
 #geralContainerCars{
-    display:grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: 10px;
-    
+    display: grid;
+  
     
 }

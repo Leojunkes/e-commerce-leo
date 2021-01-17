@@ -1,8 +1,15 @@
 import React from 'react';
 import './navbar.css';
 
+import {useSelector} from 'react-redux';
+import { Link, NavLink } from 'react-router-dom';
+
+
+
 
 function Navbar() {
+  const length = useSelector((state)=>state.cart.length)
+
     return (
       
         <nav id="navTotal" className="navbar navbar-expand-lg navbar-light ">
@@ -16,19 +23,23 @@ function Navbar() {
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a id="textGeral" className="nav-link active" aria-current="page" href="/">Shopping-Car</a>
+          <NavLink to="/" id="textGeral" className="navbar-brand" aria-current="page" >Shopping-Car</NavLink>
         </li>
         <li class="nav-item">
-          <a id="textGeral" className="nav-link" href="/listar">Listar</a>
+          <NavLink id="textGeral" className="nav-link active" to="listar" >Listar</NavLink>
         </li>
         <li class="nav-item">
-          <a id="textGeral" className="nav-link" href="/adicionar">Adicionar</a>
+          <NavLink to="/adicionar" id="textGeral" className="nav-link" href="/adicionar">Adicionar</NavLink>
         </li>
        
       </ul>
       <div id="carShopp">
-      <a id="CarrinhoRota" className="nav-link" href="/carrinho"><i id="carShopp1" className="fas fa-shopping-cart"></i></a>
-      <p id="numberCarShopp">0</p>
+        <ul className="navbar-nav ml-md-auto">
+      <NavLink to="/carrinho" id="CarrinhoRota" activeClassName="active" className="nav-item"><i id="carShopp1" className="fa fa-shopping-cart fa-3x" aria-hidden="true">
+        <span className="fa-counter">{length}</span>
+        </i></NavLink>
+        </ul>
+      
       
       </div>
       
