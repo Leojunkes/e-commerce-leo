@@ -21,7 +21,7 @@ ReactDOM.render(
             <Route path="/adicionar" component={Adicionar}  />
             <Route path="/carrinho" component={CarrinhoCompras}  />
             <Footer/>
-        </BrowserRouter>
+    </BrowserRouter>
        
     
    </Provider>,

@@ -1,20 +1,34 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
+import Itemcart from '../componentes/cart';
+import {removeItem} from '../store/ducks/cart'
+
 
 import './carrinho.css';
 
 export default function CarrinhoCompras(){
     const cart = useSelector((state)=>state.cart);
+    const dispatch = useDispatch();
+
     console.log(cart.length)
+
+    function removeItemcart(id){
+        dispatch(removeItem(id));
+    }
 
     return(
     <div className="container-fluid">
-        <div className="row-ta">
-            {cart.length === 0 ? (<p id="carrinhoText">Sem produtos no carrinho merda...</p> 
+        <div className="row">
+            {cart.length === 0 ? (<p className="text-center" id="carrinhoText">Sem produtos no carrinho merda...</p> 
             
             ):( 
+
+            <React.Fragment>
+
+                {cart.map((item)=> <Itemcart key={item._id} item={item} removeItemCart={removeItemcart}/>)}
+
+            </React.Fragment>
             
-            <p>teste</p>
             )}
         </div>
     </div>

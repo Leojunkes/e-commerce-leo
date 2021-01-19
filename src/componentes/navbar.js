@@ -26,16 +26,16 @@ function Navbar() {
           <NavLink to="/" id="textGeral" className="navbar-brand" aria-current="page" >Shopping-Car</NavLink>
         </li>
         <li class="nav-item">
-          <NavLink id="textGeral" className="nav-link active" to="listar" >Listar</NavLink>
+          <NavLink id="textGeral" className="nav-link active" to="/listar" >Listar</NavLink>
         </li>
         <li class="nav-item">
-          <NavLink to="/adicionar" id="textGeral" className="nav-link" href="/adicionar">Adicionar</NavLink>
+          <NavLink to="/adicionar" id="textGeral" className="nav-link">Adicionar</NavLink>
         </li>
        
       </ul>
       <div id="carShopp">
         <ul className="navbar-nav ml-md-auto">
-      <NavLink to="/carrinho" id="CarrinhoRota" activeClassName="active" className="nav-item"><i id="carShopp1" className="fa fa-shopping-cart fa-3x" aria-hidden="true">
+      <NavLink to="/carrinho" id="CarrinhoRota" activeClassName="active" className="nav-item"><i id="carShopp1" className="fa fa-shopping-cart fa-2x" aria-hidden="true">
         <span className="fa-counter">{length}</span>
         </i></NavLink>
         </ul>
