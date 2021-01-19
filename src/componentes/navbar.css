@@ -1,17 +1,23 @@
 #navTotal{
     background-color: cornflowerblue;
-    
+    height: 100%;
 }
 #textGeral{
     color: white;
 }
 #carShopp1{
     color: white;
-    padding-left: 371%;
+    
     
     
 }
 
 .fa-counter{
 
+}
+@media(min-width: 992px){
+    #carShopp1 {
+        position: absolute;
+        right: -150px;
+    }
 }

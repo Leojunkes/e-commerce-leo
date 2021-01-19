@@ -3,6 +3,7 @@ import './navbar.css';
 
 import {useSelector} from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
+import Itemcart from './cart';
 
 
 
@@ -31,17 +32,18 @@ function Navbar() {
         <li class="nav-item">
           <NavLink to="/adicionar" id="textGeral" className="nav-link">Adicionar</NavLink>
         </li>
-       
-      </ul>
-      <div id="carShopp">
-        <ul className="navbar-nav ml-md-auto">
-      <NavLink to="/carrinho" id="CarrinhoRota" activeClassName="active" className="nav-item"><i id="carShopp1" className="fa fa-shopping-cart fa-2x" aria-hidden="true">
+        <li class="nav-item">
+        <NavLink to="/carrinho" id="CarrinhoRota" activeClassName="active" className="nav-item"><i style={{paddingLeft:175}} id="carShopp1" className="fa fa-shopping-cart fa-2x" aria-hidden="true">
         <span className="fa-counter">{length}</span>
         </i></NavLink>
-        </ul>
+        
       
       
-      </div>
+      
+        </li>
+       
+      </ul>
+      
       
     </div>
   </div>

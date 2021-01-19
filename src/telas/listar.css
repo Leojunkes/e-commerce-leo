@@ -18,6 +18,6 @@ i{
 }
 #geralContainerCars{
     display: grid;
-  
+    height: 100%;
     
 }
