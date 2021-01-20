@@ -32,17 +32,26 @@ function Navbar() {
         <li class="nav-item">
           <NavLink to="/adicionar" id="textGeral" className="nav-link">Adicionar</NavLink>
         </li>
+        
+        <div style={{width:50}}>
         <li class="nav-item">
-        <NavLink to="/carrinho" id="CarrinhoRota" activeClassName="active" className="nav-item"><i style={{paddingLeft:175}} id="carShopp1" className="fa fa-shopping-cart fa-2x" aria-hidden="true">
+          <NavLink  to="/login" id="usuarios" activeClassName="active" style={{paddingLeft:175}} className="nav-item"><i  id="usuario" className="fa fa-user fa-2x" aria-hidden="true" >
+        </i></NavLink>
+        </li>
+        </div>
+        
+        
+        
+        <li class="nav-item">
+        <NavLink  to="/carrinho" id="CarrinhoRota" activeClassName="active" className="nav-item"><i style={{paddingLeft:185, marginTop:7}} id="carShopp1" className="fa fa-shopping-cart fa-2x " aria-hidden="true">
         <span className="fa-counter">{length}</span>
         </i></NavLink>
-        
-      
-      
-      
         </li>
+        
+        
+        </ul>
        
-      </ul>
+      
       
       
     </div>

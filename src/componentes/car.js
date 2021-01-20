@@ -10,7 +10,7 @@ export default function Car({car, addItemCart}) {
                 <img id="imgCard" src={car.url} className="card-img-top" alt={car.name} />        
                 <div className="card-body">
                     <h5>{car.name}</h5>
-                    <button className="btn btn-primary" onClick={()=>addItemCart(car)}>
+                    <button style={{width:60}} className="btn btn-primary" onClick={()=>addItemCart(car)}>
                         <i className="fa fa-cart-plus fa-2x" aria-hidden="true"/>
                     </button>
                 </div>

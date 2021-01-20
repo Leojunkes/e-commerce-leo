@@ -11,13 +11,21 @@
     
     
 }
-
-.fa-counter{
-
+#usuarios{
+    color: white;
+    
 }
+
+
 @media(min-width: 992px){
     #carShopp1 {
         position: absolute;
         right: -150px;
+    }
+    #usuarios{
+        position: absolute;
+        left: 900px;
+        margin-top: 5px;
+        
     }
 }
