@@ -1,20 +1,28 @@
 import React from 'react';
 import './navbar.css';
-
-import {useSelector} from 'react-redux';
-import { Link, NavLink } from 'react-router-dom';
-import Itemcart from './cart';
+import logoutService from '../services/logout.service'
+import {useSelector, useDispatch} from 'react-redux';
+import {  NavLink } from 'react-router-dom';
 
 
 
 
 function Navbar() {
+
+  const icon = <i  id="usuario" className="fa fa-user fa-2x" aria-hidden="true" ></i>
   const length = useSelector((state)=>state.cart.length)
+
+  const {isAuthenticated} = useSelector(state => state.auth)
+  const dispatch = useDispatch()
+
+  function authLogoutButton() {
+    isAuthenticated && dispatch(logoutService())
+  }
 
     return (
       
         <nav id="navTotal" className="navbar navbar-expand-lg navbar-light ">
-  <div className="container-fluid">
+  <div className="container-fluid sm-4 row-3">
     <a className="navbar-brand" href="#">
         
         </a>
@@ -30,15 +38,19 @@ function Navbar() {
           <NavLink id="textGeral" className="nav-link active" to="/listar" >Listar</NavLink>
         </li>
         <li class="nav-item">
-          <NavLink to="/adicionar" id="textGeral" className="nav-link">Adicionar</NavLink>
+          {isAuthenticated && (
+            <NavLink to="/adicionar" id="textGeral" className="nav-link">Adicionar</NavLink>
+          )}
         </li>
         
-        <div style={{width:50}}>
+        
         <li class="nav-item">
-          <NavLink  to="/login" id="usuarios" activeClassName="active" style={{paddingLeft:175}} className="nav-item"><i  id="usuario" className="fa fa-user fa-2x" aria-hidden="true" >
-        </i></NavLink>
+          <NavLink onClick={authLogoutButton} to="/login" id="usuarios" activeClassName="active" style={{paddingLeft:175}} className="nav-item">
+            
+            {icon}
+            </NavLink>
         </li>
-        </div>
+        
         
         
         
@@ -50,11 +62,13 @@ function Navbar() {
         
         
         </ul>
-       
+        
+        
+      </div>
+
+    
       
-      
-      
-    </div>
+  
   </div>
 </nav>
      

@@ -4,7 +4,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider, useSelector } from 'react-redux';
 import store from './store/index';
-import { BrowserRouter, Redirect, Route } from 'react-router-dom';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import Footer from './componentes/footer';
 import Home from './componentes/Home';
 import Listar from './telas/listar';
@@ -29,12 +29,14 @@ ReactDOM.render(
 
     <BrowserRouter>
         <App/>
+          <Switch>
             <Route exact path="/" component={Home}  />
             <Route path="/listar" component={Listar}  />
             <RotaPrivada path="/adicionar" component={Adicionar}  />
             <Route path="/carrinho" component={CarrinhoCompras}  />
             <Route path="/login" component={Login}/>
-            <Footer/>
+         </Switch>
+         <Footer/>
     </BrowserRouter>
        
     

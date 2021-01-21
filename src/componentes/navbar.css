@@ -5,7 +5,7 @@
 #textGeral{
     color: white;
 }
-#carShopp1{
+#CarrinhoRota{
     color: white;
     
     
@@ -17,15 +17,18 @@
 }
 
 
+
 @media(min-width: 992px){
-    #carShopp1 {
+    #CarrinhoRota{
         position: absolute;
         right: -150px;
+        
     }
     #usuarios{
         position: absolute;
         left: 900px;
         margin-top: 5px;
+        
         
     }
 }
