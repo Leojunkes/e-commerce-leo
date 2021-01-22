@@ -9,7 +9,7 @@ import {  NavLink } from 'react-router-dom';
 
 function Navbar() {
 
-  const icon = <i  id="usuario" className="fa fa-user fa-2x" aria-hidden="true" ></i>
+  const icon = <i  id="usuario" className="fa fa-user fa-md" aria-hidden="true" ></i>
   const length = useSelector((state)=>state.cart.length)
 
   const {isAuthenticated} = useSelector(state => state.auth)
@@ -55,7 +55,7 @@ function Navbar() {
         
         
         <li class="nav-item">
-        <NavLink  to="/carrinho" id="CarrinhoRota" activeClassName="active" className="nav-item"><i style={{paddingLeft:185, marginTop:7}} id="carShopp1" className="fa fa-shopping-cart fa-2x " aria-hidden="true">
+        <NavLink  to="/carrinho" id="CarrinhoRota" activeClassName="active" className="nav-item"><i style={{paddingLeft:185, marginTop:7}} id="carShopp1" className="fa fa-shopping-cart fa-md " aria-hidden="true">
         <span className="fa-counter">{length}</span>
         </i></NavLink>
         </li>

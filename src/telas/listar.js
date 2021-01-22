@@ -5,7 +5,7 @@ import './listar.css';
 import {getAllCars} from '../store/fetchActions'
 
 import Car from '../componentes/car';
-import { addItem } from '../store/ducks/cart/index';
+import { addItem, removeItem } from '../store/ducks/cart/index';
 
 export default function Listar(){
 
@@ -20,10 +20,13 @@ export default function Listar(){
         dispatch(addItem(car)); 
         
     }
+    function removeItemLista(id) {
+        dispatch(removeItem(id));
+    }
 
     return(
         <div  className="container-fluid">
-            <div className="row">{cars.map((car, index)=><Car key="index" car={car} addItemCart={addItemCart}/>)}</div>
+            <div className="row">{cars.map((car, index)=><Car key="index" car={car} removeItemLista={removeItemLista} addItemCart={addItemCart}/>)}</div>
         </div>
    )
 }

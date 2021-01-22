@@ -19,7 +19,7 @@ export default function CarrinhoCompras(){
     return(
     <div className="container-fluid">
         <div className="row">
-            {cart.length === 0 ? (<p className="text-center" id="carrinhoText">Sem produtos no carrinho merda...</p> 
+            {cart.length === 0 ? (<p className="text-center" id="carrinhoText">Sem produtos no carrinho...</p> 
             
             ):( 
 
